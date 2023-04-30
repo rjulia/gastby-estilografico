@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import './profile.scss'
-import Linkeding from '../../../../assets/images/linkedin.png'
+import linkedin from '../../../../assets/images/linkedin.jpeg'
 
 const Profile = ({ profile }) => {
   const [hover, setHover] = useState(false)
@@ -34,7 +34,7 @@ const Profile = ({ profile }) => {
           {
             linkLinkedin
             && <a className="profile-linkedin" href={linkLinkedin}>
-              <img src={Linkeding} alt="linkedin" />
+              <img src={linkedin} alt="linkedin" />
             </a>
           }
         </div>
