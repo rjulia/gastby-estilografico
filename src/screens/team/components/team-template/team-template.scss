@@ -1,0 +1,87 @@
+@use '../../../../scss/variables' as *;
+@use "../../../../scss/mediaqueries" as *;
+
+.container-fluid-team {
+  width: 100%;
+}
+
+.box-title-team {
+  @include container;
+  margin: 0 auto 40px;
+  padding: 20px;
+  .title-team {
+    color:$terceryLight;
+    font-size: 68px;
+    font-family: $auxB;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    margin-top: 54px;
+    span {
+      margin-right: 15px;
+    }
+  }
+
+  .description-team {
+    color:$terceryLight;
+    font-size: 32px;
+    line-height:36px;
+    font-family: $text;
+    font-weight: 400;
+  }
+  @include desktop { 
+    margin: 0 auto 80px;
+    padding: 0;
+    .title-team {
+      font-size: 72px;
+      margin-bottom: 48px;
+      margin-top: 54px;
+      span {
+        margin-right: 15px;
+      }
+    }
+  
+    .description-team {
+      font-size: 36px;
+      line-height:40px;
+    }
+  }
+
+}
+.highlight-team {
+  padding: 40px 20px;
+  .highlight-content-team {
+    @include container;
+    margin: 0 auto;
+  }
+  p {
+    font-size: 32px;
+    line-height: 36px;
+    text-align: left;
+    font-family: $auxL;
+    margin-bottom: 20px;
+    b {
+      font-family: $auxB;
+    }
+  }
+  @include desktop { 
+    padding: 80px 0;
+    .highlight-content-team {
+      margin: 0 auto;
+    }
+    p {
+      font-size: 38px;
+      line-height:42px;
+    }
+  }
+}
+.container-profile-team {
+  @include container;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  @include desktop { 
+    margin: 80px auto;
+
+  }
+}

@@ -1,0 +1,150 @@
+
+@import '../../scss/variables';
+@import '../../scss/mediaqueries.scss';
+
+.container-footer {
+  background-color: $secondary;
+
+  .container-contact-footer {
+    background-color: $grey_dark;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+    font-family: $text;
+    .message-contact-footer {
+      color: $orange;
+      text-align: center;
+      font-family: $text;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .button-contanct-footer {
+      width: calc(100% - 40px);
+      background-color: $orange;
+      height: 75px;
+      display: flex;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      & p {
+        color: $text_color;
+        font-family: $text;
+        font-size: 22px;
+        font-weight: 300;
+      }
+    }
+    @include desktop { 
+      flex-direction: row;
+      .message-contact-footer {
+        text-align: left;
+        font-size: 28px;
+        font-weight: 400;
+        margin-right: 15px;
+      }
+      .button-contanct-footer { 
+        width: 100%;
+        margin-left: 15px;
+        width: 510px;
+        & p {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  .box-footer {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    color: $grey_dark;
+  
+    @include container;
+    .box-logo-footer-copyright {
+      font-size: 12px;
+      color: $grey_dark;
+      span {
+        margin: 0 14px;
+      }
+    }
+    .box-logo-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      & svg {
+        color: $grey_dark;
+        display: inline;
+        position: relative;
+        transform: scale(0.5) translate(-188px, 10px);
+      }
+    }
+  
+    .box-info-footer {
+      display: flex;
+      padding: 20px;
+      & div {
+        flex: 1 1 100%;
+      }
+      & h3 {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      & p, a {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        margin: 0;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: $black;
+        }
+      }
+      & span {
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 35px;
+        margin: 0;
+        display:block;
+      }
+    }
+    @include desktop { 
+      margin: 0 auto;
+      flex-direction: row;
+      .box-info-footer {
+        width: 544px;
+        padding: 20px 0;
+      }
+      .box-logo-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 0 020px;
+        > div {
+          max-height: 100px;
+        }
+        & svg {
+          color: $grey_dark;
+          transform: scale(0.53) translate(-150px, -20px);
+        }
+      }
+    }
+  }
+}
+
+
+

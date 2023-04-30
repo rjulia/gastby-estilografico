@@ -1,0 +1,133 @@
+@use "../../scss/variables" as *;
+@use "../../scss/mediaqueries" as *;
+
+.container-fluid-profile {
+  width: 100%;
+}
+
+.box-profile {
+  // @include container;
+  background: $black;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .colum-left-profile {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+  }
+  .colum-right-profile {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    background-color: $bgTeam;
+    padding: 38px;
+  }
+  .name-profile {
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    h1 {
+      color: $terceryLight;
+      font-size: 41px;
+      font-family: $text;
+    }
+  }
+  .highlights-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > div {
+      margin: 40px 0 20px;
+    }
+  }
+  .habilities-profile {
+    li {
+      font-size: 24px;
+      line-height: 28px;
+      font-family: $text;
+      font-weight: 400;
+      svg {
+        margin-right: 7px;
+      }
+      // list-style-image: url("../../assets/icons/tilde.svg");
+    }
+  }
+  .image-profile {
+    img {
+      width: 100%;
+    }
+  }
+
+  .descriptio-profile {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+      font-family: $text;
+      font-weight: 300;
+    }
+    a {
+      color: $main;
+    }
+    ul {
+      margin-left: 45px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 32px;
+      line-height: 36px;
+      margin-bottom: 15px;
+      margin-top: 40px;
+    }
+    h3 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 15px;
+      margin-top: 40px;
+    }
+    h4 {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 15px;
+      margin-top: 40px;
+      font-weight: 700;
+    }
+    h5 {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 15px;
+      margin-top: 40px;
+    }
+    h6 {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 15px;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 21px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    li {
+      // list-style-image: url("../../assets/icons/rombo.svg");
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+}

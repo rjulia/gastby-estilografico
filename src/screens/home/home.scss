@@ -1,0 +1,90 @@
+@use '../../scss/variables' as *;
+@use "../../scss/mediaqueries" as *;
+
+.container-fluid-home{
+  display: block;
+  height: auto;
+}
+.container-fluid-home-block {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+  & img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  &.block-1 {
+    background-color: $orange;
+  }
+  &.block-2 {
+    background-color: $blue;
+    a {
+      color: #d65a50;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+  &.block-3 {
+    background-color: $orange;
+    min-height: 700px;
+  }
+  & > div {
+    @include container;
+    margin: 0 auto;
+    padding: 20px 20px;
+  }
+  & h2 {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: $text;
+  }
+  @include desktop { 
+    & > div {
+      padding: 85px 0;
+    }
+    & h2 {
+      font-size: 48px;
+
+    }
+  }
+  .box-design {
+    a {
+      color: #d65a50;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+}
+.container-home-projects {
+  width: 100vw;
+  .box-home-projects {
+    width: 100%;
+    height:100px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    & h2 {
+      font-size: 24px;
+      color: $terceryLight;
+      font-weight: 300;
+      font-family: $auxB;
+      & span {
+        font-family: $auxL;
+      }
+    }
+    @include desktop {  
+      height:230px;
+
+      & h2 {
+        font-size: 60px;
+        & span {
+          font-family: $auxL;
+        }
+      }
+    }
+  }
+}

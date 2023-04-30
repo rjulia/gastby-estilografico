@@ -1,0 +1,33 @@
+
+@import '../../scss/variables';
+@import '../../scss/mediaqueries.scss';
+
+
+.container-button-navigation {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  padding: 80px 0;
+  span {
+    font-family: $text;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+.box-button-navigation {
+  width: 77px;
+  height: 77px;
+  background-color: $tercery;
+  padding:10px;
+  color: $main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.turned {
+    transform: rotate(-90deg)
+  }
+
+}

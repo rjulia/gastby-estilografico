@@ -1,0 +1,122 @@
+
+
+@import '../../scss/variables';
+@import '../../scss/mediaqueries.scss';
+
+.box-carousel {
+  width: 100%;
+  .content-carousel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: calc(100vh - 120px);
+    min-height: -webkit-fill-available;
+  }
+  .text-carousel {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: left;
+    
+    .text-carousel-content {
+      position: absolute;
+      bottom: 40px;
+      padding: 15px;
+        p {
+          font-weight: 300;
+          font-size: 18px;
+          line-height:24px;
+          margin: 5px 0;
+          color: inherit;
+          &:first-child {
+            font-family: $auxL;
+          }
+        }
+        h2 {
+          font-weight: 400;
+          font-size: 24px;
+          line-height:28px;
+          margin: 15px 0;
+          color: inherit;
+          font-family: $auxB;
+        }
+
+    } 
+  }
+  .image-carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-height: 340px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $white;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .arrow {
+    display: none;
+  }
+  .nextArrow {
+    right: 50px;
+  }
+  .prevArrow {
+    left: 50px;
+  }
+  @include desktop { 
+    .content-carousel {
+      display: flex;
+      position: relative;
+      height: 530px;
+      min-height: auto;
+    }
+    .image-carousel {
+      position: absolute;
+      left: initial;
+      right: 0;
+      top: 0;
+      max-height: max-content;
+      padding: 0;
+    }
+    .text-carousel {
+      flex: 1 1;
+      margin: 0 auto;
+      text-align: left;
+      
+      .text-carousel-content {
+        width: 75%;
+        padding-top: 0;
+        padding-right: 200px;
+        position: relative;
+          p {
+            font-weight: 300;
+            font-size: 28px;
+            line-height:36px;
+            margin: 5px 0;
+            color: inherit;
+          }
+          h2 {
+            font-weight: 400;
+            font-size: 60px;
+            line-height:72px;
+            margin: 15px 0;
+            color: inherit;
+          }
+  
+      } 
+    }
+    .arrow {
+      display: inline-block;
+    }
+  }
+}

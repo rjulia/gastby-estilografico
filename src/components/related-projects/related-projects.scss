@@ -1,0 +1,38 @@
+
+@import '../../scss/variables';
+@import '../../scss/mediaqueries.scss';
+
+.box-title-projects {
+  padding: 0 20px;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+
+  h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 300;
+    color: $terceryLight;
+    font-family: $auxL;
+
+    span {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: $auxB;
+
+    }
+  }
+
+  @include desktop {
+    padding: 0;
+    margin-top: 60px;
+
+    h2 {
+      margin: 0;
+      font-size: 48px;
+    }
+  }
+}

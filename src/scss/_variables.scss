@@ -1,0 +1,63 @@
+@use "./mediaqueries" as *;
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+// fonts
+$title: "Roboto", sans-serif;
+
+$text: "Roboto", sans-serif;
+$aux: "Blogger Sans Medium", sans-serif;
+$auxB: "Blogger Sans Bold", sans-serif;
+$auxL: "Blogger Sans Light", sans-serif;
+
+//metrics
+
+// @include container: 1210px;
+
+$main: #ec5244;
+$secondary: #edebe3;
+$tercery: #380e0a;
+$terceryLight: #a49686;
+$bgTeam: #d6ccc1;
+$grey_dark: #413129;
+$orange: #fab079;
+$contact: #722c2a;
+$blue: #8be0e3;
+$text_color: #380e0a;
+$white: #fff;
+$black: #000;
+$light-grey: #f2f2f2;
+
+// SIZES
+$font_title: 22px;
+$font_text: 14px;
+$font_card_home: 16px;
+
+// Z-INDEX
+$home-image: -1;
+$card-text: 10;
+$cookies: 1000;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1140px,
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1300px,
+) !default;
+
+@mixin container() {
+  @media only screen and (max-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: $tablet-width) {
+    width: 1210px;
+  }
+}

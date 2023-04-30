@@ -1,0 +1,4 @@
+replace helmet componet by HEAD gatsby api component by HEAD gatsby
+
+
+scss compile

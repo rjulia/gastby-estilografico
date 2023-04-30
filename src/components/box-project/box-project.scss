@@ -1,0 +1,119 @@
+
+@import '../../scss/variables';
+@import '../../scss/mediaqueries.scss';
+
+.container-box-project{
+  position: relative;
+  height: 300px;
+  background-color: rgba(0,0,0, 0.5);
+  margin: 20px 0;
+  border-bottom: 10px solid $main;
+  cursor: pointer;
+  overflow: hidden;
+  &:hover {
+    .container-box-image-project {
+      transform: scale(1.05);
+      transition: all .2s ease-in-out;
+    }
+  }
+  .box-box-project {
+    @include container;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-content: space-between;
+    z-index: 1;
+    .content-box-project {
+      padding: 20px 20px;
+    }
+    & h3, & p {
+      color: $white;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 40px;
+      font-family: $text;
+      margin: 0;
+    }
+    & p {
+      font-weight: 300;
+    }
+  }
+  .button-box-project {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    & a {
+      text-decoration: none;
+    }
+    & p{
+      color: $white;
+      max-width: 680px;
+      font-size: 36px;
+      font-weight: 400;
+      line-height:40px;
+      font-family: $text;
+      margin: 0;
+      & span {
+        font-weight: 700;
+        font-size: 72px;
+      }
+    }
+  }
+  .container-box-image-project {
+    top: 0;
+    position:absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100vw;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+  }
+  @include desktop { 
+  height: 440px;
+  display: flex;
+  align-items: center;
+    .box-box-project {
+      display: flex;
+      flex-direction:row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      .content-box-project {
+        padding: 0;
+      }
+      & h3, & p {
+        color: $white;
+        max-width: 680px;
+        font-size: 48px;
+        font-weight: 700;
+        line-height:56px;
+      }
+      & p {
+        font-weight: 300;
+      }
+    }
+
+    .button-box-project {
+      flex: 1 1 30%;
+      margin-bottom: 0;
+
+    }
+    .container-box-image-project {
+      top: 0;
+      position:absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 440px;
+      width: 100%;
+      z-index: -1;
+      transition: all .2s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@use '../../scss/variables' as *;
+@use "../../scss/mediaqueries" as *;
+
+.container-menu-services {
+  width: 100vw;
+  margin: 0 auto;
+  background: $secondary;
+  text-align: center;
+  flex: 1;
+  padding-bottom: 80px;
+  .box-submenu {
+    @include container;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .list-submenu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  .item-submenu {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 65px;
+    color: $tercery;
+    &:hover {
+      opacity: 0.6;
+    }
+    .item-number-submenu {
+      width: 35px;
+      color: $tercery;
+      border-bottom: 2px solid $tercery;
+      border-top: 2px solid $tercery;
+      font-size: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: $auxL;
+      text-align: left;
+
+    }
+    .item-title-submenu {
+      padding-left: 20px;
+      width: 100%;
+      font-size: 24px;
+      font-family: $auxB;
+      text-align: left;
+    }
+    .item-description-submenu {
+      display:none;
+      flex: 1 1 calc(100% - 350px);
+      text-align: left;
+
+    }
+  }
+  @include desktop { 
+    padding-bottom: 80px;
+    .item-submenu {
+      height: 90px;
+      .item-number-submenu {
+        width: 35px;
+      }
+      .item-title-submenu {
+        width: 300px;
+        padding-left: 50px;
+      }
+      .item-description-submenu {
+        display: block;
+      }
+    }
+  }
+}

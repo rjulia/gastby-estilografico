@@ -1,0 +1,41 @@
+@import '../../scss/variables';
+
+.page-container {
+  width: 100vw;
+  margin: 0 auto;
+  flex: 1;
+  padding-bottom: 80px;
+}
+
+.page-box {
+  @include container;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.page-title {
+  font-size: 52px;
+  font-weight: 700;
+  font-family: $auxB;
+  color: $terceryLight;
+  text-transform: uppercase;
+  margin: 50px 0 40px;
+}
+
+.page-section {
+  font-family: $text;
+  h4 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+  }
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}

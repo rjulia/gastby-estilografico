@@ -1,0 +1,217 @@
+@use "../../scss/variables" as *;
+@use "../../scss/mediaqueries" as *;
+
+.container-fluid-project-detail {
+  width: 100%;
+}
+
+.container-box-image-project-detail {
+  height: 250px;
+  background-attachment: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include desktop {
+    height: 510px;
+  }
+}
+
+.header-title-project-detail {
+  padding: 50px 20px 0;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+
+  .title-project-detail {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 26px;
+      font-weight: 300;
+      font-family: $text;
+      color: $terceryLight;
+    }
+  }
+
+  .list-objectives-project-detail {
+    flex: 1 1 100%;
+
+    ul {
+      list-style: none;
+      padding-left: 25px;
+    }
+
+    li {
+      font-size: 24px;
+      color: $black;
+      font-weight: 400;
+      font-family: $text;
+      position: relative;
+      svg {
+        margin-right: 7px;
+      }
+      &::before {
+        position: absolute;
+        // top: 5px;
+        left: -20px;
+        // content: url("../../assets/icons/tilde.svg")
+      }
+    }
+  }
+
+  .content-project-detail {
+    padding-top: 74px;
+    font-family: $text;
+
+    h3,
+    h4 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+    a {
+      color: #d65a50;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  @include desktop {
+    padding: 100px 0 0;
+    width: 900px;
+
+    .title-project-detail {
+      flex: 1 1 50%;
+      h1 {
+        font-size: 40px;
+        font-weight: 300;
+        font-family: $text;
+        color: $terceryLight;
+      }
+    }
+
+    .list-objectives-project-detail {
+      flex: 1 1 50%;
+
+      ul {
+        padding-left: 100px;
+        list-style: none;
+      }
+
+      li {
+        font-size: 20px;
+        color: $black;
+        font-weight: 400;
+        font-family: $text;
+      }
+    }
+    .content-project-detail {
+      padding-top: 74px;
+      font-family: $text;
+
+      h3,
+      h4 {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 36px;
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+.list-images-project-detail {
+  @include container;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .box-image-project-detail {
+    flex: 1 1 100%;
+    margin-bottom: 30px;
+    & img {
+      width: 100%;
+    }
+  }
+
+  .image-descrption-project-detail {
+    text-align: left;
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+
+    .box-image-project-detail {
+      flex: 1 1 50%;
+      margin-bottom: 30px;
+      max-width: 1210px;
+      flex-wrap: wrap;
+      & img {
+        width: auto;
+        // max-width: 100%;
+      }
+    }
+    .image-descrption-project-detail {
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.videos-project-detail {
+  margin: 30px 0;
+}
+
+.list-related-project-detail {
+  text-align: center;
+  padding-bottom: 0;
+  a {
+    line-height: 24px;
+  }
+}
+
+.title-related-project-detail {
+  font-size: 36px;
+  font-family: $aux;
+  color: $terceryLight;
+  margin: 25px 0;
+}
+
+.text-related-project-detail {
+  font-size: 16px;
+  font-family: $text;
+
+  & span {
+    text-decoration: underline;
+  }
+
+  & span:first-child {
+    font-weight: 700;
+    text-decoration: none;
+  }
+}

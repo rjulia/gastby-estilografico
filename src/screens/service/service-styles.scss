@@ -1,0 +1,80 @@
+@use '../../scss/variables' as *;
+@use "../../scss/mediaqueries" as *;
+
+.container-fluid-services {
+  width: 100%;
+}
+
+.box-title-service {
+  @include container;
+  margin: 0 auto 40px;
+  padding: 20px;
+
+  .title-service {
+    color:$terceryLight;
+    font-size: 40px;
+    font-family: $auxB;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    span {
+      margin-right: 15px;
+    }
+  }
+
+  .description-service {
+    color:$terceryLight;
+    font-size: 24px;
+    line-height:28px;
+    font-family: $text;
+    font-weight: 400;
+  }
+  @include desktop {  
+    margin: 0 auto 80px;
+    padding: 0;
+    .title-service {
+      font-size: 72px;
+      margin-bottom: 48px;
+      margin-top: 54px;
+      span {
+        margin-right: 15px;
+      }
+    }
+    .description-service {
+      font-size: 36px;
+      line-height:40px;
+    }
+  }
+
+}
+.highlight-services {
+  padding: 40px 20px;
+  .highlight-content-services {
+    @include container;
+    margin: 0 auto;
+  }
+  p {
+    font-size: 24px;
+    line-height:28px;
+    text-align: center;
+    font-family: $auxL;
+    margin-bottom: 20px;
+    b {
+      font-family: $auxB;
+    }
+  }
+  @include desktop {  
+    padding: 80px 0;
+
+    p {
+      font-size: 38px;
+      line-height:42px;
+      text-align: left;
+      font-family: $auxL;
+      margin-bottom: 20px;
+      b {
+        font-family: $auxB;
+      }
+    }
+  }
+}

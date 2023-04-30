@@ -1,0 +1,42 @@
+
+@import '../../scss/variables';
+@import '../../scss/mediaqueries.scss';
+
+.container-menu-overload {
+  top: -120vh;
+  left: 0;
+  z-index: 10000;
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  position: fixed;
+  background-color: $secondary;
+  transition: all 1s;
+  &.isOpen{
+    top: 0;
+    transition: all 1s;
+  }
+  .box-close-menu-overload {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    color: $text-color;
+  }
+
+  .box-menu-overload {
+    ul {
+      margin-top: 50px;
+      padding-left: 20px;
+      .list-menu-overload {
+        height: 65px;
+        width: 100%;
+        display: block;
+        font-size: 44px;
+        color: $text-color;
+        font-family: $auxB;
+      }
+    }
+  }
+}
