@@ -1,6 +1,5 @@
-
-@import '../../scss/variables';
-@import '../../scss/mediaqueries.scss';
+@import "../../scss/variables";
+@import "../../scss/mediaqueries.scss";
 
 .container-fluid-header-home {
   background: $white;
@@ -10,36 +9,34 @@
   max-height: 120px;
   .container-menu {
     @include container;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     margin: 0 auto;
     height: 80px;
-
   }
   .container-logo {
     height: 80px;
     width: 100%;
     a {
-     color: $main;
-     width: 50vw;
-     height: 80px;
-     display: flex;
-     position: relative;
-     
-     & svg {
-       transform: scale(0.5);
-       position: absolute;
-       top: -22px;
-       left: -70px;
- 
-     }
-   }
+      color: $main;
+      width: 50vw;
+      height: 80px;
+      display: flex;
+      position: relative;
+
+      & img {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 80%;
+      }
+    }
   }
   .icon-menu {
     display: block;
-    position:absolute;
+    position: absolute;
     right: 20px;
     top: 40%;
     color: $main;
@@ -49,8 +46,8 @@
     list-style: none;
     align-items: flex-end;
     margin-right: 100px;
-    
-    .list-menu {    
+
+    .list-menu {
       min-width: 150px;
       border-bottom: 2px solid $white;
       text-align: center;
@@ -64,14 +61,15 @@
         text-decoration: none;
         color: $text_color;
       }
-      &:hover, &.selected {
+      &:hover,
+      &.selected {
         border-bottom: 2px solid $main;
         & li {
           color: $text_color;
         }
       }
       .list-submenus {
-        position:absolute;
+        position: absolute;
         padding-top: 30px;
         width: 100vw;
         height: calc(100vh - 130px);
@@ -91,7 +89,7 @@
       }
     }
   }
-  @include desktop { 
+  @include desktop {
     .container-menu {
       @include container;
       margin: 0 auto;
@@ -118,7 +116,7 @@
         top: -6px;
       }
     }
-    .box-menu ul { 
+    .box-menu ul {
       display: flex;
       margin-bottom: 15px;
     }

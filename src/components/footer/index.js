@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import React, { useMemo, useState, useEffect } from 'react'
 import { Link } from 'gatsby'
-import Logo from '../../assets/icons/logoClean.svg'
+import logo from '../../assets/images/logo-nuevo-con-tilde-roja.png'
 import './footer.scss'
 import { getPages } from '../../connect/pages/request'
 import { getSocialMedia } from '../../connect/social-media/request'
@@ -58,7 +58,7 @@ const Footer = ({ location }) => {
             <div>
               <Link
                 to={'/'}>
-                <Logo />
+                <img src={logo} alt="logo" />
               </Link>
             </div>
             <p className="box-logo-footer-copyright">Copyright<span>©</span>ESTILOGRÁFICO</p>

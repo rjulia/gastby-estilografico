@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Logo from '../../assets/icons/logoClean.svg'
+import logo from '../../assets/images/logo-nuevo-rojo-con-tilde-marron.png'
 import MenuIcon from '../../assets/icons/menu-icon.svg'
 import './header.scss'
 
@@ -11,7 +11,7 @@ const Header = ({
     <div className="container-menu">
       <div className="container-logo">
         <Link to="/">
-          <Logo />
+          <img src={logo} alt="logo" />
         </Link>
       </div>
       <div className="icon-menu" onClick={onOpenMenu}>
@@ -21,17 +21,17 @@ const Header = ({
         <ul>
           <Link activeClassName="selected" className="list-menu" to="/equipo/">
             <li>
-                Equipo
+              Equipo
             </li>
           </Link>
           <Link activeClassName="selected" className="list-menu" to="/servicios/">
             <li>
-                Servicios
+              Servicios
             </li>
           </Link>
           <Link activeClassName="selected" className="list-menu" to="/contacto/">
             <li>
-                Contacto
+              Contacto
             </li>
           </Link>
         </ul>

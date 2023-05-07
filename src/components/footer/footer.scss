@@ -1,6 +1,5 @@
-
-@import '../../scss/variables';
-@import '../../scss/mediaqueries.scss';
+@import "../../scss/variables";
+@import "../../scss/mediaqueries.scss";
 
 .container-footer {
   background-color: $secondary;
@@ -11,7 +10,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     font-family: $text;
     .message-contact-footer {
       color: $orange;
@@ -37,7 +36,7 @@
         font-weight: 300;
       }
     }
-    @include desktop { 
+    @include desktop {
       flex-direction: row;
       .message-contact-footer {
         text-align: left;
@@ -45,7 +44,7 @@
         font-weight: 400;
         margin-right: 15px;
       }
-      .button-contanct-footer { 
+      .button-contanct-footer {
         width: 100%;
         margin-left: 15px;
         width: 510px;
@@ -58,10 +57,10 @@
   .box-footer {
     width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-direction: column;
     color: $grey_dark;
-  
+
     @include container;
     .box-logo-footer-copyright {
       font-size: 12px;
@@ -88,7 +87,7 @@
         transform: scale(0.5) translate(-188px, 10px);
       }
     }
-  
+
     .box-info-footer {
       display: flex;
       padding: 20px;
@@ -100,7 +99,8 @@
         font-weight: 700;
         margin-bottom: 10px;
       }
-      & p, a {
+      & p,
+      a {
         font-size: 12px;
         font-weight: 400;
         line-height: 16px;
@@ -118,10 +118,10 @@
         font-weight: 400;
         line-height: 35px;
         margin: 0;
-        display:block;
+        display: block;
       }
     }
-    @include desktop { 
+    @include desktop {
       margin: 0 auto;
       flex-direction: row;
       .box-info-footer {
@@ -133,18 +133,17 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 0 0 020px;
+        padding: 0 0 20px;
         > div {
           max-height: 100px;
+          margin-bottom: 20px;
+          margin-top: 8px;
         }
-        & svg {
-          color: $grey_dark;
-          transform: scale(0.53) translate(-150px, -20px);
+        img {
+          width: 100%;
+          max-width: 180px;
         }
       }
     }
   }
 }
-
-
-
