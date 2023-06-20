@@ -52,8 +52,11 @@
       font-weight: 400;
       font-family: $text;
       position: relative;
+      padding-left: 25px;
       svg {
         margin-right: 7px;
+        position: absolute;
+        left: 0px;
       }
       &::before {
         position: absolute;

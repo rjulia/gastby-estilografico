@@ -39,6 +39,7 @@ const Projects = ({ location }) => {
     category: _.get(job, 'linkedFrom.servicioCollection.items[0].nombre'),
     slug: _.get(job, 'slug'),
   }))
+  console.log('🚀 ~ file: index.js:42 ~ relatedJobs ~ relatedJobs:', relatedJobs)
   return (
     <div className="container-fluid-project-detail">
       <Helmet
@@ -60,8 +61,8 @@ const Projects = ({ location }) => {
         <div className="list-objectives-project-detail">
           <ul >
             {
-              listaDeObjectivos && listaDeObjectivos.length > 0 && _.map(listaDeObjectivos, (objectivo) => (
-                <li key={objectivo}><Tilde />{objectivo}</li>
+              listaDeObjectivos && listaDeObjectivos.length > 0 && _.map(listaDeObjectivos, (objectivo, idx) => (
+                <li key={idx}><Tilde />{objectivo}</li>
               ))
             }
           </ul>
@@ -72,8 +73,8 @@ const Projects = ({ location }) => {
       </div>
       <div className="list-images-project-detail">
         {
-          listaDeImagesCollection.items.length > 0 && _.map(listaDeImagesCollection.items, (image) => (
-            <div className="box-image-project-detail" key={image.url}>
+          listaDeImagesCollection.items.length > 0 && _.map(listaDeImagesCollection.items, (image, idx) => (
+            <div className="box-image-project-detail" key={idx}>
               <div>
                 <img src={image.url || ''} alt={_.get(image, 'title', '')} />
               </div>
@@ -86,8 +87,8 @@ const Projects = ({ location }) => {
       </div>
       <div className="list-videos-project-detail">
         {
-          listaDeVideos && _.map(listaDeVideos, (videoUrl) => (
-            <div className="videos-project-detail" key={videoUrl}>
+          listaDeVideos && _.map(listaDeVideos, (videoUrl, idx) => (
+            <div className="videos-project-detail" key={idx}>
               <ReactPlayer url={videoUrl} width={'100%'} height="600px" />
             </div>
           ))
@@ -105,12 +106,7 @@ const Projects = ({ location }) => {
                 <Link
                   key={`key-related-relatedJob-${idx}`}
                   style={{ textDecoration: 'none' }}
-                  to={{
-                    pathname: `/proyectos/${relatedJob.slug}`,
-                    // state: {
-                    //   id: service.sys.id
-                    // }
-                  }} >
+                  to={ `/proyectos/${relatedJob.slug}`} >
                   <p
 
                     className="text-related-project-detail">
