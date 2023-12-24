@@ -49,11 +49,12 @@ const Form = () => {
         return errors
       }}
       onSubmit={async (values, { setSubmitting }) => {
+        console.log('🚀 ~ file: index.js:52 ~ onSubmit={ ~ values:', values, qs.stringify(values))
         setSubmitting(true)
         const options = {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          data: qs.stringify(values),
+          data: qs.stringify(values, { arrayFormat: 'comma', encode: false }),
           url: '/',
         }
         try {
