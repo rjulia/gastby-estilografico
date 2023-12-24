@@ -61,31 +61,31 @@ const Form = () => {
         console.error(errors)
         return errors
       }}
-      onSubmit={(values, { setSubmitting }) => {
-        axios({
-          method: 'post',
-          url: `${API_PATH}`,
-          headers: {
-            'content-type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'PUT, GET, POST',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-          },
-          data: {
-            ...values,
-            services: JSON.stringify(values.services),
-          },
-        }).then((result) => {
-          if (result.status === 200) {
-            navigate('/enviado/')
-          }
-        }).catch((error) => console.log(error))
+      // onSubmit={(values, { setSubmitting }) => {
+      //   axios({
+      //     method: 'post',
+      //     url: `${API_PATH}`,
+      //     headers: {
+      //       'content-type': 'application/json',
+      //       'Access-Control-Allow-Origin': '*',
+      //       'Access-Control-Allow-Methods': 'PUT, GET, POST',
+      //       'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      //     },
+      //     data: {
+      //       ...values,
+      //       services: JSON.stringify(values.services),
+      //     },
+      //   }).then((result) => {
+      //     if (result.status === 200) {
+      //       navigate('/enviado/')
+      //     }
+      //   }).catch((error) => console.log(error))
 
-        setTimeout(() => {
-          // alert(JSON.stringify(values, null, 2));
-          setSubmitting(false)
-        }, 400)
-      }}
+      //   setTimeout(() => {
+      //     // alert(JSON.stringify(values, null, 2));
+      //     setSubmitting(false)
+      //   }, 400)
+      // }}
     >
       {({
         values,
@@ -97,7 +97,8 @@ const Form = () => {
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form onSubmit={handleSubmit}>
+        <form name="contact-estilografico" method='POST' data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field" action='/send/'>
+          <input type="hidden" name="form-name" />
           <div>
             <div className='left-form'>
               <div className='box-input'>
