@@ -70,6 +70,7 @@ const Form = () => {
           body: new URLSearchParams(formData).toString(),
         })
           .then((result) => {
+            console.log('🚀 ~ file: index.js:73 ~ .then ~ result:', result)
             if (result.status === 200) {
               navigate('/enviado/')
             }
