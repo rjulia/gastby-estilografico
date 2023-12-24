@@ -69,25 +69,25 @@ const Form = () => {
         // })
         body.append('name', 'Ramon')
         console.log('🚀 ~ file: index.js:66 ~ Form ~ body:', body)
-        fetch('/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            // accept: 'application/json',
-            // 'Access-Control-Allow-Origin': '*',
-            // 'Access-Control-Allow-Methods': 'PUT, GET, POST',
-            // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-          },
-          body,
-        })
-          .then((result) => {
-            console.log('🚀 ~ file: index.js:73 ~ .then ~ result:', result)
-            if (result.status === 200) {
-              navigate('/enviado/')
-            }
-          })
-          .catch((error) => console.log(error))
-          .finally(() => setSubmitting(false))
+        // fetch('/', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded',
+        //     // accept: 'application/json',
+        //     // 'Access-Control-Allow-Origin': '*',
+        //     // 'Access-Control-Allow-Methods': 'PUT, GET, POST',
+        //     // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        //   },
+        //   body,
+        // })
+        //   .then((result) => {
+        //     console.log('🚀 ~ file: index.js:73 ~ .then ~ result:', result)
+        //     if (result.status === 200) {
+        //       navigate('/enviado/')
+        //     }
+        //   })
+        //   .catch((error) => console.log(error))
+        //   .finally(() => setSubmitting(false))
         // axios({
         //   method: 'post',
         //   url: `${API_PATH}`,
