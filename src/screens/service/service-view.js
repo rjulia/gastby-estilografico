@@ -10,7 +10,7 @@ import {
 import './service-styles.scss'
 
 const ServiceView = ({ service }) => {
-  const colorsHightLight = _.split(service.highlightsColors, ',')
+  const colorsHightLight = service ? _.split(service?.highlightsColors, ',') : []
   const sections = _.get(service, 'seccionesServicosCollection.items', [])
 
   const {

@@ -3,4 +3,3 @@ const url = `https://graphql.contentful.com/content/v1/spaces/${process.env.GATS
 export {
   url,
 }
-

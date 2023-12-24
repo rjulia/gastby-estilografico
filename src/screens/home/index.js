@@ -65,7 +65,7 @@ const Home = () => {
       >
         <div className="box-design">
           <h2><b>Diseñamos la imagen de tu negocio</b>:<br /><br />
-            <Link to="/servicios/branding/">Branding </Link> (Creación de marca y promoción), <Link to="/servicios/paginas-web/">Web</Link>, <Link to="/servicios/paginas-web">Tienda online</Link>, <Link to="/servicios/fotografia/">Fotografía</Link>, <Link to="/servicios/videos/">Video</Link>, <Link to="/servicios/catalogos/">Catálogo</Link>...</h2>
+            <Link to="/servicio/branding/">Branding </Link> (Creación de marca y promoción), <Link to="/servicio/paginas-web-y-tiendas-online/">Web</Link>, <Link to="/servicio/paginas-web-y-tiendas-online/">Tienda online</Link>, <Link to="/servicio/fotografia/">Fotografía</Link>, <Link to="/servicio/videos/">Video</Link>, <Link to="/servicio/catalogos/">Catálogo</Link>...</h2>
         </div>
       </div>
       <div className="container-home-projects">
