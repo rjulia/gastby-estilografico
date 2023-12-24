@@ -123,7 +123,7 @@ const Form = () => {
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form name="contact-estilografico" method='POST' data-netlify="true" onSubmit={handleSubmit} data-netlify-honeypot="bot-field" action='/enviado/'>
+        <form name="contact-estilografico" data-netlify="true" onSubmit={handleSubmit} data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact-estilografico"/>
           <div>
             <div className='left-form'>
