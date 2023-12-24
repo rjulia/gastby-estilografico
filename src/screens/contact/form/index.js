@@ -67,7 +67,7 @@ const Form = () => {
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(formData).toString(),
+          body: values,
         })
           .then((result) => {
             console.log('🚀 ~ file: index.js:73 ~ .then ~ result:', result)
