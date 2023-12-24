@@ -124,7 +124,7 @@ const Form = () => {
                           <input
                             name="services"
                             type="checkbox"
-                            value={service}
+                            value={service.value}
                             checked={values.services.includes(service.value)}
                             onChange={(e) => {
                               if (e.target.checked) {
