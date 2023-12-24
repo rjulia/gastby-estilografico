@@ -22,6 +22,8 @@ const Form = () => {
   return (
     <Formik
       initialValues={{
+        'bot-field': '',
+        'form-name': 'contact-estilografico',
         name: '',
         telephone: '',
         comments: '',
@@ -48,8 +50,6 @@ const Form = () => {
       }}
       onSubmit={async (values, { setSubmitting }) => {
         setSubmitting(true)
-        qs.stringify(values)
-        console.log('🚀 ~ file: index.js:52 ~ onSubmit={ ~ qs.stringify(values):', qs.stringify(values))
         const options = {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
