@@ -63,17 +63,17 @@ const Form = () => {
       }}
       onSubmit={(values, { setSubmitting }) => {
         const body = new FormData()
-        Object.entries(values).forEach(([key, val]) => {
-          console.log('🚀 ~ file: index.js:70 ~ Object.entries ~ key, val:', key, val)
-          body.append(key, val)
-        })
+        // Object.entries(values).forEach(([key, val]) => {
+        //   console.log('🚀 ~ file: index.js:70 ~ Object.entries ~ key, val:', key, val)
+        //   body.append(key, val)
+        // })
+        body.append('name', 'Ramon')
         console.log('🚀 ~ file: index.js:66 ~ Form ~ body:', body)
-
         fetch('/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            accept: 'application/json',
+            // accept: 'application/json',
             // 'Access-Control-Allow-Origin': '*',
             // 'Access-Control-Allow-Methods': 'PUT, GET, POST',
             // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
