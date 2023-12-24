@@ -2,10 +2,8 @@ import React from 'react'
 import { Formik, FieldArray } from 'formik'
 import { Link, navigate } from 'gatsby'
 import axios from 'axios'
-// import { useRouter } from '../../../hooks/use-router'
 import '../contact.scss'
-
-const API_PATH = './api/index.php'
+import qs from 'qs'
 
 const Form = () => {
   // const router = useRouter()
@@ -20,19 +18,6 @@ const Form = () => {
     { value: 'fotografia', label: 'Fotografía' },
     { value: 'expositores', label: 'Expositores y Carteles' },
   ]
-
-  // useEffect(() => {
-  //   const script = document.createElement('script');
-
-  //   script.src = "https://www.google.com/recaptcha/api.js";
-  //   script.async = true;
-
-  //   document.body.appendChild(script);
-
-  //   return () => {
-  //     document.body.removeChild(script);
-  //   }
-  // }, []);
 
   return (
     <Formik
@@ -61,56 +46,25 @@ const Form = () => {
         console.error(errors)
         return errors
       }}
-      onSubmit={(values, { setSubmitting }) => {
-        const body = new FormData()
-        // Object.entries(values).forEach(([key, val]) => {
-        //   console.log('🚀 ~ file: index.js:70 ~ Object.entries ~ key, val:', key, val)
-        //   body.append(key, val)
-        // })
-        body.append('name', 'Ramon')
-        console.log('🚀 ~ file: index.js:66 ~ Form ~ body:', body)
-        // fetch('/', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/x-www-form-urlencoded',
-        //     // accept: 'application/json',
-        //     // 'Access-Control-Allow-Origin': '*',
-        //     // 'Access-Control-Allow-Methods': 'PUT, GET, POST',
-        //     // 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-        //   },
-        //   body,
-        // })
-        //   .then((result) => {
-        //     console.log('🚀 ~ file: index.js:73 ~ .then ~ result:', result)
-        //     if (result.status === 200) {
-        //       navigate('/enviado/')
-        //     }
-        //   })
-        //   .catch((error) => console.log(error))
-        //   .finally(() => setSubmitting(false))
-        // axios({
-        //   method: 'post',
-        //   url: `${API_PATH}`,
-        //   headers: {
-        //     'content-type': 'application/json',
-        //     'Access-Control-Allow-Origin': '*',
-        //     'Access-Control-Allow-Methods': 'PUT, GET, POST',
-        //     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-        //   },
-        //   data: {
-        //     ...values,
-        //     services: JSON.stringify(values.services),
-        //   },
-        // }).then((result) => {
-        //   if (result.status === 200) {
-        //     navigate('/enviado/')
-        //   }
-        // }).catch((error) => console.log(error))
-
-        // setTimeout(() => {
-        //   // alert(JSON.stringify(values, null, 2));
-        //   setSubmitting(false)
-        // }, 400)
+      onSubmit={async (values, { setSubmitting }) => {
+        setSubmitting(true)
+        const data = {
+          ...values,
+        }
+        const options = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          data: qs.stringify(data),
+          url: '/',
+        }
+        try {
+          await axios(options)
+          navigate('/enviado/')
+        } catch (e) {
+          console.log('🚀 ~ file: index.js:80 ~ onSubmit={ ~ e:', e)
+        } finally {
+          setSubmitting(false)
+        }
       }}
     >
       {({
