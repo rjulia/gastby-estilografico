@@ -62,12 +62,21 @@ const Form = () => {
         return errors
       }}
       onSubmit={(values, { setSubmitting }) => {
-        const formData = new FormData(values)
+        const body = new FormData()
+        Object.entries(values).forEach(([key, val]) => {
+          body.append(key, val)
+        })
 
         fetch('/', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: values,
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            accept: 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'PUT, GET, POST',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+          },
+          body,
         })
           .then((result) => {
             console.log('🚀 ~ file: index.js:73 ~ .then ~ result:', result)
